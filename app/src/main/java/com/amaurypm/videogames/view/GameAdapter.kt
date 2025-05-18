@@ -7,7 +7,8 @@ import com.amaurypm.videogames.data.remote.model.Game
 import com.amaurypm.videogames.databinding.GameElementBinding
 
 class GameAdapter(
-    private val games: List<Game>
+    private val games: List<Game>,
+    private val onGameClick: (Game) -> Unit
 ): RecyclerView.Adapter<GameViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -25,6 +26,10 @@ class GameAdapter(
         val game = games[position]
 
         holder.bind(game)
+
+        holder.itemView.setOnClickListener {
+            onGameClick(game)
+        }
     }
 
     override fun getItemCount(): Int = games.size

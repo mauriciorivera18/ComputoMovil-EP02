@@ -14,8 +14,8 @@ interface GamesApi {
 
     @GET("cm/games/game_detail.php")
     suspend fun getGameDetail(
-        @Query("id") id: String?,
-        @Query("name") name: String?
+        @Query("id") id: String?/*,
+        @Query("name") name: String?*/
     ): GameDetail
 
     @GET("games/games_list")

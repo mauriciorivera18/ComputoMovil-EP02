@@ -11,6 +11,8 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
+        android:indeterminateDrawable="@drawable/loading_anim"
+        android:indeterminateDuration="1500"
         />
 
     <androidx.recyclerview.widget.RecyclerView
