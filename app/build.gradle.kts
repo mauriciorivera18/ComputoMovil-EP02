@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    namespace = "com.amaurypm.videogames"
+    namespace = "com.example.dbapi"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.amaurypm.videogames"
-        minSdk = 24
+        applicationId = "com.example.dbapi"
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"

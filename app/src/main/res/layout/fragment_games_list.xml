@@ -3,22 +3,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#141A31"
-    tools:context=".view.fragments.GamesListFragment">
+    android:background="@drawable/bg2"
+    tools:context=".view.fragments.CharaListFragment">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="121dp"
+        android:fontFamily="@font/saiyansans"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/yellow"
+        android:textSize="90sp" />
     <ProgressBar
         android:id="@+id/pbLoading"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
         android:indeterminateDrawable="@drawable/loading_anim"
-        android:indeterminateDuration="1500"
-        />
+        android:indeterminateDuration="1500" />
+
+    <ProgressBar
+        android:id="@+id/pdLoading2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="313dp"
+        android:layout_height="196dp"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/yellow"
+        android:progress="@integer/material_motion_duration_short_2"
+        android:progressDrawable="@drawable/kintoun"
+        android:progressTint="@color/orange" />
+
+    <TextView
+        android:id="@+id/tv_error3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:fontFamily="@font/saiyansans"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="10dp"
+        android:text="@string/error"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvGames"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="635dp"
+        android:layout_gravity="bottom" >
 
     </androidx.recyclerview.widget.RecyclerView>
 

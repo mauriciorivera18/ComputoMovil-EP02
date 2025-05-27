@@ -1,5 +1,14 @@
 <resources>
-    <string name="app_name">VideoGames</string>
+    <string name="app_name">DBAPI</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="max_ki">MAX KI</string>
+    <string name="ki">KI</string>
+    <string name="race">RACE</string>
+    <string name="gender">GENDER</string>
+    <string name="affiliation">AFFILIATION</string>
+    <string name="transformation">TRANSFORMATIONS</string>
+    <string name="no_transformation">(NO TRANSFORMATIONS KNOWN)</string>
+    <string name="error">ERROR CONNECTING TO DATABASE</string>
+    <string name="empty"> </string>
 </resources>

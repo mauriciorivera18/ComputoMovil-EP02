@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#141A31"
-    tools:context=".view.fragments.GameDetailFragment">
+    android:background="@drawable/bg_list3"
+    android:backgroundTint="@color/very_dark_orange"
+    android:backgroundTintMode="multiply"
+    tools:context=".view.fragments.CharaDetailFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -35,49 +37,272 @@
                     android:orientation="vertical">
 
 
-                    <TextView
-                        android:id="@+id/tvTitle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/ubuntu_bold"
-                        android:gravity="center_horizontal"
-                        android:paddingBottom="10dp"
-                        android:textColor="@color/white"
-                        android:textSize="25sp"
-                        tools:text="Title" />
-
                     <com.makeramen.roundedimageview.RoundedImageView
                         android:id="@+id/ivImage"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="370dp"
+                        android:layout_height="380dp"
                         android:layout_marginStart="20dp"
                         android:layout_marginEnd="20dp"
                         app:riv_corner_radius="10dp"
                         tools:src="@mipmap/ic_launcher" />
 
                     <TextView
-                        android:id="@+id/tvLongDesc"
+                        android:id="@+id/tvName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/ubuntu"
+                        android:fontFamily="@font/saiyansans"
                         android:paddingLeft="15dp"
                         android:paddingTop="15dp"
                         android:paddingRight="15dp"
                         android:paddingBottom="10dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/yellow"
+                        android:textSize="40sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvKiPh"
+                            android:layout_width="74dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/saiyansans"
+                            android:text="@string/ki"
+                            android:textAlignment="center"
+                            android:textColor="@color/orange"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/tvMaxKiPh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/saiyansans"
+                            android:text="@string/max_ki"
+                            android:textAlignment="center"
+                            android:textColor="@color/orange"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvKi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/wildwords"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/tvKi2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/wildwords"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvRacePh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/saiyansans"
+                            android:text="@string/gender"
+                            android:textAlignment="center"
+                            android:textColor="@color/orange"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/tvRace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/wildwords"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvGenderPh"
+                            android:layout_width="199dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/saiyansans"
+                            android:text="@string/race"
+                            android:textAlignment="center"
+                            android:textColor="@color/orange"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:id="@+id/tvGender"
+                            android:layout_width="211dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/wildwords"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/wildwords"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp"
+                        android:textAlignment="center"
                         android:textColor="@color/white"
-                        android:textSize="20sp"
-                        tools:text="Description" />
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvAffiliationPh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/saiyansans"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/affiliation"
+                        android:textAlignment="center"
+                        android:textColor="@color/yellow"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tvAffiliation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/saiyansans"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="34sp" />
+
+                    <TextView
+                        android:id="@+id/tvTransformationsPh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/saiyansans"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/transformation"
+                        android:textAlignment="center"
+                        android:textColor="@color/yellow"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tvNoTransform"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/saiyansans"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:paddingRight="15dp"
+                        android:paddingBottom="10dp"
+                        android:text="@string/no_transformation"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvTransformation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:longClickable="false"
+                        android:touchscreenBlocksFocus="false">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
                 </LinearLayout>
+
             </ScrollView>
+
+            <TextView
+                android:id="@+id/tv_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:fontFamily="@font/saiyansans"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
+                android:text="@string/error"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
 
             <ProgressBar
                 android:id="@+id/pbLoading"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_centerInParent="true" />
+
+            <ProgressBar
+                android:id="@+id/pdLoading2"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="313dp"
+                android:layout_height="196dp"
                 android:layout_centerInParent="true"
-                />
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/orange"
+                android:progressDrawable="@drawable/kintoun"
+                android:progressTint="@color/orange" />
 
         </RelativeLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="212dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
